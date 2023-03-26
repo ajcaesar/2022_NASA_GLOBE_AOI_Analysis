@@ -10,7 +10,7 @@ dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted'])
 
 x = df.iloc[5, 7]
 st.write(x)
-st.write(math.isnan(x))
+st.write(math.isnan('HELLO'))
 
 i = 0
 while i < 110:
