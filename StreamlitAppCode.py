@@ -17,7 +17,7 @@ while i < 110:
   x = 0
   numCompleted = 0
   Finished = True
-  while x < 37:
+  while x < 36:
     y = df.iloc[37 * i + x, 7]
     st.write(y)
     x += 1
