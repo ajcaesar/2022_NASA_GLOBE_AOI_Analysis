@@ -8,8 +8,8 @@ st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-2.csv")
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted'])
 
-x = String(df.iloc[5, 7])
-st.write(x)
+x = df.iloc[5, 7]
+st.write(pd.isna(x))
 
 i = 0
 while i < 110:
