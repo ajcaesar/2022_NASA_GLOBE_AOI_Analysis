@@ -1,4 +1,5 @@
 import numpy as np
+import math 
 import pandas as pd
 import streamlit as st
 from io import StringIO
@@ -8,7 +9,7 @@ df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted'])
 
 st.write(df.iloc[5, 7])
-st.write('@' in df.iloc[5, 7])
+st.write(math.isnan(df.iloc[5, 7]))
 #i = 0
 #while i < 110:
  # x = 0
