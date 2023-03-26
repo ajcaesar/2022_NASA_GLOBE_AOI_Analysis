@@ -20,7 +20,7 @@ while i < 110:
     y = df.iloc[37 * i + x, 7]
     if not pd.isna(y):
       numCompleted += 0
-    else 
+    else:
       Finished = False
     x += 1
   st.write(i)
