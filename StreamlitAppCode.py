@@ -18,7 +18,7 @@ while i < 110:
   Finished = True
   while x < 37:
     y = df.iloc[37 * i + x, 7]
-    st.write(math.isnan(y))
+    st.write(pd.isna(y))
     x += 1
   i += 1
     
