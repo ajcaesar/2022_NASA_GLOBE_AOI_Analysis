@@ -11,10 +11,15 @@ dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted'])
 x = df.iloc[5, 7]
 st.write(x)
 st.write(math.isnan(x))
-#i = 0
-#while i < 110:
- # x = 0
-  #numCompleted = 0
-  #Finished = False
- # while x < 37
-  #df.iloc[37 * i + x, 7] != 
+
+i = 0
+while i < 110:
+  x = 0
+  numCompleted = 0
+  Finished = True
+  while x < 37:
+    if not math.isnan(df.iloc[37 * i + x, 7]): 
+      numCompleted += 1
+  st.write(numCompleted)  
+    
+    
