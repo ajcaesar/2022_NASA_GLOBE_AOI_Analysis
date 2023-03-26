@@ -18,8 +18,11 @@ while i < 110:
   numCompleted = 0
   Finished = True
   while x < 37:
-    if not math.isnan(df.iloc[37 * i + x, 7]): 
+    y = df.iloc[37 * i + x, 7]
+    if not math.isnan(y): 
       numCompleted += 1
-  st.write(numCompleted)  
+    x += 1
+  st.write(numCompleted)
+  i += 1
     
     
