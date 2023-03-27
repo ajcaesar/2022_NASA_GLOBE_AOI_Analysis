@@ -1,7 +1,5 @@
 from io import StringIO
 import streamlit as st
-from arcgis.features import GeoAccessor
-from arcgis.gis import GIS
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
