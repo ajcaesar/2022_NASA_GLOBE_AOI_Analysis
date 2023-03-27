@@ -7,8 +7,10 @@ from io import StringIO
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-2.csv")
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon'])
+df2 = pd.DataFrame(columns = ['AOI', 'lat', 'lon'])
 
 i = 0
+r = 0
 numSet = 0
 while i < 111:
   x = 0
@@ -28,9 +30,10 @@ while i < 111:
   dfcheck.at[i, 'lon'] = df.iloc[i*37, 2]
   if Finished:
     numSet += 1
+    df2.at[r, 'lat'] = df.iloc[i, 'lat']
+    df2.at[r, 'lon'] = df.iloc[i, 'lon']  
   i += 1
 
-df2 = dfcheck[['lat', 'lon']]
 g = str(numSet) + ' AOIs are complete'
 st.map(df2)
 st.write(dfcheck)
