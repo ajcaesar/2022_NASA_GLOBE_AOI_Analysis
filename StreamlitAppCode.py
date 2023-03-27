@@ -6,7 +6,7 @@ from io import StringIO
 
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-2.csv")
-dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted'])
+dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete'])
 
 i = 0
 while i < 111:
@@ -20,9 +20,9 @@ while i < 111:
     else:
       Finished = False
     x += 1
-  st.write(i)
-  st.write(numCompleted)
-  st.write(Finished)
+  dfcheck.at[i, 0] = i
+  dfcheck.at[i, 1] = numCompleted
+  dfcheck.at[i, 2] = Finished
   i += 1
-    
+st.write(dfcheck)
     
