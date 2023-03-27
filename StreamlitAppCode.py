@@ -33,9 +33,8 @@ while i < 111:
 df2 = dfcheck[['lat', 'lon']]
 g = 0
 st.map(df2)
-st.write(df2)
 st.write(dfcheck)
-st.write(numSet)
+st.write(numSet + "AOIs are complete")
 
       
   
