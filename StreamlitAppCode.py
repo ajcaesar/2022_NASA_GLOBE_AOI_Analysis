@@ -29,10 +29,10 @@ while i < 111:
     numSet += 1
   else:
     df2.drop(i)
-    dfcheck.drop(i)
   i += 1
   
 st.map(df2)
+st.write(df2)
 st.write(dfcheck)
 st.write(numSet)
 
