@@ -29,7 +29,7 @@ st.write(dfcheck)
 z = 0; 
 numSet = 0;
 while z < 110:
-  if (dfcheck.iloc[z, 'Complete'] == True:
+  if dfcheck.iloc[z, 'Complete'] == True:
       numSet += 1
   z += 1
 st.write(numSet)
