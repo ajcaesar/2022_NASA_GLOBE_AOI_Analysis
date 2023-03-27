@@ -29,7 +29,7 @@ while i < 111:
     numSet += 1
   else:
     df2.drop(i)
-    dfchec.drop(i)
+    dfcheck.drop(i)
   i += 1
   
 st.map(df2)
