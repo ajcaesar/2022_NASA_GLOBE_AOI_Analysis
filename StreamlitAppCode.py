@@ -25,4 +25,13 @@ while i < 111:
   dfcheck.at[i, 'Complete'] = Finished
   i += 1
 st.write(dfcheck)
-    
+
+z = 0; 
+numSet = 0;
+while z < 110:
+  if (dfcheck.iloc[z, 'Complete'] = True:
+      numSet += 1
+  z += 1
+st.write(numSet)
+      
+  
