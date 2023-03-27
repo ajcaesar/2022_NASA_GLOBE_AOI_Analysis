@@ -25,6 +25,8 @@ while i < 111:
   dfcheck.at[i, 'AOI'] = i
   dfcheck.at[i, 'NumCompleted'] = numCompleted
   dfcheck.at[i, 'Complete'] = Finished
+  dfcheck.at[i, 'lat'] = df.iloc[i, 2]
+  dfcheck.at[i, 'lon'] = df.iloc[i, 3]
   if Finished:
     numSet += 1
   i += 1
