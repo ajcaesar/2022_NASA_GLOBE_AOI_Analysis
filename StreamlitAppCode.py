@@ -38,7 +38,6 @@ while i < 111:
 
 g = str(numSet) + ' AOIs are complete'
 st.map(df2)
-st.write(df2)
 st.write(dfcheck)
 st.write(g)
 
