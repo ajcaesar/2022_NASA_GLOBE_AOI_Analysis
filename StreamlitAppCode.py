@@ -24,7 +24,7 @@ while i < 111:
   dfcheck.at[i, 'AOI'] = i
   dfcheck.at[i, 'NumCompleted'] = numCompleted
   dfcheck.at[i, 'Complete'] = Finished
-  if Finished 
+  if Finished:
     numSet += 1
   i += 1
   
