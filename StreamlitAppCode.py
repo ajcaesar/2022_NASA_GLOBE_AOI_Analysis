@@ -31,6 +31,10 @@ while i < 111:
   i += 1
 
 df2 = dfcheck[['lat', 'lon']]
+g = 0
+while g < 111:
+  if not dfcheck.iloc[g, 2]:
+    df2.drop(df2.index[g])
 st.map(df2)
 st.write(df2)
 st.write(dfcheck)
