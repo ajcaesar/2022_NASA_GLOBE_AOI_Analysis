@@ -9,7 +9,7 @@ df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted'])
 
 i = 0
-while i < 110:
+while i < 111:
   x = 0
   numCompleted = 0
   Finished = True
