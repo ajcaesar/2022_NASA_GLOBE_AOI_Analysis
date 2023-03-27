@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import math
-import ee
 
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-2.csv")
