@@ -7,6 +7,8 @@ from io import StringIO
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-2.csv")
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete'])
+df2 = df[['lat', 'lon']]
+st.map(df2)
 
 i = 0
 numSet = 0
