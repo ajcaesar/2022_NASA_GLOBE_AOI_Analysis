@@ -20,9 +20,9 @@ while i < 111:
     else:
       Finished = False
     x += 1
-  dfcheck.at[i, 0] = i
-  dfcheck.at[i, 1] = numCompleted
-  dfcheck.at[i, 2] = Finished
+  dfcheck.at[i, 'AOI'] = i
+  dfcheck.at[i, 'NumCompleted'] = numCompleted
+  dfcheck.at[i, 'Complete'] = Finished
   i += 1
 st.write(dfcheck)
     
