@@ -30,8 +30,8 @@ while i < 111:
   dfcheck.at[i, 'lon'] = df.iloc[i*37, 2]
   if Finished:
     numSet += 1
-    df2.at[r, 'lat'] = df.iloc[i, 'lat']
-    df2.at[r, 'lon'] = df.iloc[i, 'lon']  
+    df2.at[r, 'lat'] = df.iloc[i, 3]
+    df2.at[r, 'lon'] = df.iloc[i, 4]  
   i += 1
 
 g = str(numSet) + ' AOIs are complete'
