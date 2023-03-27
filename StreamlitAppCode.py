@@ -39,7 +39,7 @@ while i < 111:
 g = str(numSet) + ' AOIs are complete'
 st.header('Map of 68 Complete AOIs')
 st.map(df2)
-st.header('Table of AOIs and Number of Plots')
+st.header('Table of AOIs and Number of Completed Plots')
 st.write(dfcheck)
 st.write(g)
 
