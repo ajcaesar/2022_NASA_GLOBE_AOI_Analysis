@@ -53,7 +53,7 @@ ww = alt.Chart(dfTime, title = 'Average Time (seconds) per plot for 68 Completed
 st.altair_chart(ww)
 st.write(str(dfTime['Avg Time'].mean()) + ' is the mean time')
 
-boolean z = True
+z = True
 for AOI in df["AOI"]:
     if dfcheck["AOI"].isin([AOI]).any():
       z = False
