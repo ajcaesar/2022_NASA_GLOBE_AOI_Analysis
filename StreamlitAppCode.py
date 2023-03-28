@@ -52,6 +52,6 @@ st.write(dfcheck)
 st.write(g)
 ww = alt.Chart(dfTime).mark_point().encode(x="AOI", y="Avg Time")
 st.altair_chart(ww)
-
+st.write(dfTime)
       
   
