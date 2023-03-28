@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import math
+import altair as alt
 
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-3.csv")
@@ -49,7 +50,8 @@ st.map(df2)
 st.header('Table of AOIs and Number of Completed Plots')
 st.write(dfcheck)
 st.write(g)
-st.barChart(dfTime)
+ww = alt.Chart(cars).mark_point().encode(x="AOI", y="Avg Time")
+st.altair_chart(ww)
 
       
   
