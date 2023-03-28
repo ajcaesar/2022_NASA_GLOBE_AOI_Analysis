@@ -45,10 +45,10 @@ while i < 111:
     r += 1
   i += 1
 
-st.header('Map of 68 Complete AOIs')
-st.map(df2)
 st.header('Table of AOIs and Number of Completed Plots')
 st.write(dfcheck)
+st.header('Map of 68 Complete AOIs')
+st.map(df2)
 ww = alt.Chart(dfTime, title = 'Average Time per plot for 68 Completed AOIs').mark_bar().encode(x="AOI", y="Avg Time")
 st.altair_chart(ww)
       
