@@ -8,6 +8,7 @@ st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-3.csv")
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon'])
 df2 = pd.DataFrame(columns = ['AOI', 'lat', 'lon', 'avg time'])
+dfTime = pd.DataFrame(columns = ['AOI', 'Avg Time'])
 
 i = 0
 r = 0
@@ -35,9 +36,10 @@ while i < 111:
   if Finished:
     numSet += 1
     df2.at[r, 'AOI'] = i
+    dfTime.at[r, 'AOI'] = i
     df2.at[r, 'lat'] = dfcheck.iloc[i, 3]
     df2.at[r, 'lon'] = dfcheck.iloc[i, 4]  
-    df2.at[r, 'avg time'] = totalTime / 37
+    dfTime.at[r, 'avg time'] = totalTime / 37
     r += 1
   i += 1
 
@@ -47,7 +49,7 @@ st.map(df2)
 st.header('Table of AOIs and Number of Completed Plots')
 st.write(dfcheck)
 st.write(g)
-st.barChart(df2['avg time'])
+st.barChart(dfTime)
 
       
   
