@@ -52,10 +52,11 @@ st.map(df2)
 ww = alt.Chart(dfTime, title = 'Average Time (seconds) per plot for 68 Completed AOIs').mark_bar().encode(x="AOI", y="Avg Time")
 st.altair_chart(ww)
 st.write(str(dfTime['Avg Time'].mean()) + ' is the mean time')
-      
+
+boolean z = True
 for AOI in df["AOI"]:
     if dfcheck["AOI"].isin([AOI]).any():
-      t = aijdaifeal
+      z = False
     else:
        df = df.drop(df[df["AOI"] == AOI])
 st.write(df)
