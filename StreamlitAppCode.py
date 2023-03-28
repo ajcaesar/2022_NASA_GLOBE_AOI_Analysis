@@ -53,9 +53,9 @@ ww = alt.Chart(dfTime, title = 'Average Time (seconds) per plot for 68 Completed
 st.altair_chart(ww)
 st.write(str(dfTime['Avg Time'].mean()) + ' is the mean time')
       
-for row in df.iterrows():
-  if not row['AOI'] in dfcheck['AOI']:
-    df = df.drop(row)
-    
+for AOI in df["AOI"]:
+    if dfcheck["AOI"].isin([AOI]).any():
+    else:
+       df = df.drop(df[df["AOI"] == AOI]
 st.write(df)
   
