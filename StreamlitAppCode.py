@@ -5,8 +5,8 @@ import numpy as np
 import math
 
 st.title('Which AOIs are complete')
-df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-2.csv")
-dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon'])
+df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-3.csv")
+dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon', 'avg time'])
 df2 = pd.DataFrame(columns = ['AOI', 'lat', 'lon'])
 
 i = 0
@@ -15,11 +15,15 @@ numSet = 0
 while i < 111:
   x = 0
   numCompleted = 0
+  totalTime = 0
   Finished = True
   while x < 37:
     y = df.iloc[37 * i + x, 7]
+    time = df.iloc[37 * i + x, 12]
     if not pd.isna(y):
       numCompleted += 1
+      if time < 1000: 
+        totalTime += time
     else:
       Finished = False
     x += 1
@@ -28,6 +32,7 @@ while i < 111:
   dfcheck.at[i, 'Complete'] = Finished
   dfcheck.at[i, 'lat'] = df.iloc[i*37, 3]
   dfcheck.at[i, 'lon'] = df.iloc[i*37, 2]
+  dfcheck.at[i, 'avg time'] = totalTime / 37
   if Finished:
     numSet += 1
     df2.at[r, 'AOI'] = i
