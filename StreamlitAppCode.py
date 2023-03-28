@@ -58,6 +58,6 @@ for AOI in df["AOI"]:
     if dfTime["AOI"].isin([AOI]).any():
       z = False
     else:
-       df = df.drop(df.loc["AOI"] == AOI])
+       df = df.drop(df.loc[["AOI"] == AOI])
 st.write(df)
   
