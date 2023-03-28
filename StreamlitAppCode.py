@@ -51,5 +51,6 @@ st.header('Map of 68 Complete AOIs')
 st.map(df2)
 ww = alt.Chart(dfTime, title = 'Average Time (seconds) per plot for 68 Completed AOIs').mark_bar().encode(x="AOI", y="Avg Time")
 st.altair_chart(ww)
+st.write(dfTime.describe())
       
   
