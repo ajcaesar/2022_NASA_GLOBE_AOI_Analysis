@@ -7,7 +7,7 @@ import altair as alt
 
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-3.csv")
-dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon'])
+dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon', 'Avg Time'])
 df2 = pd.DataFrame(columns = ['AOI', 'lat', 'lon', 'avg time'])
 dfTime = pd.DataFrame(columns = ['AOI', 'Avg Time'])
 
@@ -35,6 +35,7 @@ while i < 111:
   dfcheck.at[i, 'lat'] = df.iloc[i*37, 3]
   dfcheck.at[i, 'lon'] = df.iloc[i*37, 2]
   if Finished:
+    dfcheck.at[i, 'Avg Time'] = totalTime/ 37
     numSet += 1
     df2.at[r, 'AOI'] = i
     dfTime.at[r, 'AOI'] = i
