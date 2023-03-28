@@ -40,7 +40,7 @@ while i < 111:
     dfTime.at[r, 'AOI'] = i
     df2.at[r, 'lat'] = dfcheck.iloc[i, 3]
     df2.at[r, 'lon'] = dfcheck.iloc[i, 4]  
-    dfTime.at[r, 'Avg time'] = totalTime / 37
+    dfTime.at[r, 'Avg Time'] = totalTime / 37
     r += 1
   i += 1
 
