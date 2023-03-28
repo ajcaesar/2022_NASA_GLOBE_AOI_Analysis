@@ -55,6 +55,7 @@ st.write(str(dfTime['Avg Time'].mean()) + ' is the mean time')
       
 for AOI in df["AOI"]:
     if dfcheck["AOI"].isin([AOI]).any():
+      t = aijdaifeal
     else:
        df = df.drop(df[df["AOI"] == AOI])
 st.write(df)
