@@ -69,7 +69,7 @@ while zz < len(df):
 
 st.subheader('time statistics')
 st.write(df['analysis_duration'].describe())
-st.subheader('new dataset, cleaned off unfinished AOIs')
+st.subheader('new dataset, removed unfinished AOIs')
 st.write(df)
 
 
