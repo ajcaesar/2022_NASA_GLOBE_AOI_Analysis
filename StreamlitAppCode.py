@@ -51,7 +51,6 @@ st.header('Map of 68 Complete AOIs')
 st.map(df2)
 ww = alt.Chart(dfTime, title = 'Average Time (seconds) per plot for 68 Completed AOIs').mark_bar().encode(x="AOI", y="Avg Time")
 st.altair_chart(ww)
-st.write(str(dfTime['Avg Time'].mean()) + ' is the mean time')
 
 z = True
 for AOI in df["AOI"]:
@@ -61,6 +60,7 @@ for AOI in df["AOI"]:
        row = df[df["AOI"] == AOI]
        index = row.index[0]
        df = df.drop(index)
+st.write(dfTime['duration'].describe())
 st.header('Copy of original df with unfinished AOIs removed')
 st.write(df)
   
