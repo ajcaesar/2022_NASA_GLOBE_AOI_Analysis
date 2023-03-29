@@ -67,7 +67,9 @@ while zz < len(df):
     df.iloc[zz, df.columns.get_loc('analysis_duration')] = np.nan
   zz += 1
 
+st.subheader('time statistics')
 st.write(df['analysis_duration'].describe())
+st.subheader('new dataset, cleaned off unfinished AOIs')
 st.write(df)
 
 
