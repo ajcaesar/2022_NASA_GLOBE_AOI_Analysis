@@ -63,7 +63,7 @@ for AOI in df["AOI"]:
         
 zz = 0
 while zz < len(df):
-qq = f.iloc[zz]['analysis_duration']
+  qq = f.iloc[zz]['analysis_duration']
   if qq > 1000:
     st.write(qq)
     df.at[zz, 'analysis_duration'] = np.nan
