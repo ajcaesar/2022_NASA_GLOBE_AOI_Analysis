@@ -67,7 +67,7 @@ while zz < len(df):
     df.iloc[zz, df.columns.get_loc('analysis_duration')] = np.nan
   zz += 1
 
-st.write(dfTime['analysis_duration'].describe())
+st.write(dfT['analysis_duration'].describe())
 st.write(df)
 
 
