@@ -59,8 +59,7 @@ for AOI in df["AOI"]:
     else:
        row = df[df["AOI"] == AOI]
        index = row.index[0]
-       df = df.drop(index)
-st.write(df)      
+       df = df.drop(index)  
 zz = 0
 while zz < len(df):
   qq = df.iloc[zz]['analysis_duration']
