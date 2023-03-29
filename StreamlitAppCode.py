@@ -61,5 +61,6 @@ for AOI in df["AOI"]:
        row = df[df["AOI"] == AOI]
        index = row.index[0]
        df = df.drop(index)
+st.header('Copy of original df with unfinished AOIs removed')
 st.write(df)
   
