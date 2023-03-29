@@ -65,7 +65,7 @@ zz = 0
 while zz < len(df):
   qq = df.iloc[zz]['analysis_duration']
   if qq > 1500:
-    df.at[zz, 'analysis_duration'] = np.nan
+    df.iloc[zz, df.columns.get_loc('analysis_duration')] = np.nan
   zz += 1
 
 st.write(df)
