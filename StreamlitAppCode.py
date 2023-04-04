@@ -108,20 +108,20 @@ while repeats < 68:
     sumBushXSchrub += df.iloc[37*repeats + AOI][26]
     sumShadow += df.iloc[37*repeats + AOI][27]
     AOInum += 1
-  dfLandcoverDistributions.iloc[repeats, 'AOI'] = 1
-  dfLandcoverDistributions.iloc[repeats, 'sumIrrigationDitch'] = sumIrrigationDitch
-  dfLandcoverDistributions.iloc[repeats, 'sumGrass'] = sumGrass
-  dfLandcoverDistributions.iloc[repeats, 'sumRivers/Streams'] = sumRiversXStreams
-  dfLandcoverDistributions.iloc[repeats, 'sumImperviousSurface'] = sumImperviousSurface
-  dfLandcoverDistributions.iloc[repeats, 'sumLake/Pond'] = sumLakeXPondXContainer
-  dfLandcoverDistributions.iloc[repeats, 'sumCultivatedVegetation'] = sumCultivatedVegetation
-  dfLandcoverDistributions.iloc[repeats, 'sumBareGround'] = sumBareGround
-  dfLandcoverDistributions.iloc[repeats, 'sumBuilding'] = sumBuilding
-  dfLandcoverDistributions.iloc[repeats, 'sumTreatedPool'] = sumTreatedPool
-  dfLandcoverDistributions.iloc[repeats, 'sumTrees/Canopy'] = sumTreesXCanopyCover
-  dfLandcoverDistributions.iloc[repeats, 'sumUnknown'] = sumUnknown
-  dfLandcoverDistributions.iloc[repeats, 'sumBush/Shrub'] = sumBushXShrub
-  dfLandcoverDistributions.iloc[repeats, 'sumShadow'] = sumShadow
+  dfLandcoverDistributions.at[repeats, 'AOI'] = 1
+  dfLandcoverDistributions.at[repeats, 'sumIrrigationDitch'] = sumIrrigationDitch
+  dfLandcoverDistributions.at[repeats, 'sumGrass'] = sumGrass
+  dfLandcoverDistributions.at[repeats, 'sumRivers/Streams'] = sumRiversXStreams
+  dfLandcoverDistributions.at[repeats, 'sumImperviousSurface'] = sumImperviousSurface
+  dfLandcoverDistributions.at[repeats, 'sumLake/Pond'] = sumLakeXPondXContainer
+  dfLandcoverDistributions.at[repeats, 'sumCultivatedVegetation'] = sumCultivatedVegetation
+  dfLandcoverDistributions.at[repeats, 'sumBareGround'] = sumBareGround
+  dfLandcoverDistributions.at[repeats, 'sumBuilding'] = sumBuilding
+  dfLandcoverDistributions.at[repeats, 'sumTreatedPool'] = sumTreatedPool
+  dfLandcoverDistributions.at[repeats, 'sumTrees/Canopy'] = sumTreesXCanopyCover
+  dfLandcoverDistributions.at[repeats, 'sumUnknown'] = sumUnknown
+  dfLandcoverDistributions.at[repeats, 'sumBush/Shrub'] = sumBushXShrub
+  dfLandcoverDistributions.at[repeats, 'sumShadow'] = sumShadow
   repeats += 1
   
 st.write(dfLandCoverDistributions)
