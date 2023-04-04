@@ -108,7 +108,7 @@ while repeats < 68:
     sumBushXSchrub += df.iloc[37*repeats + AOI][26]
     sumShadow += df.iloc[37*repeats + AOI][27]
     AOInum += 1
-  dfLandcoverDistributions.iloc[repeats, 'AOI'] = df.iloc[repeats*37][0]
+  dfLandcoverDistributions.iloc[repeats, 'AOI'] = 1
   dfLandcoverDistributions.iloc[repeats, 'sumIrrigationDitch'] = sumIrrigationDitch
   dfLandcoverDistributions.iloc[repeats, 'sumGrass'] = sumGrass
   dfLandcoverDistributions.iloc[repeats, 'sumRivers/Streams'] = sumRiversXStreams
