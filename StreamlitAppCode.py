@@ -67,10 +67,62 @@ while zz < len(df):
     df.iloc[zz, df.columns.get_loc('analysis_duration')] = np.nan
   zz += 1
 
+df.reset_index(drop=True, inplace=True)
 st.subheader('time statistics')
 st.write(df['analysis_duration'].describe())
 st.subheader('new dataset, removed unfinished AOIs')
 st.write(df)
 
 
+dfLandcoverDistributions = pd.DataFrame(columns = ['AOI', 'sumIrrigationDitch', 'sumGrass', 'sumRivers/Streams', 'sumImperviousSurface', 'sumLake/Pond', 
+                                                  'sumCultivatedVegetation', 'sumBareGround', 'sumBuilding', 'sumTreatedPool', 'sumTrees/Canopy', 'sumUnknown', 'sumBush/Shrub',
+                                                  'sumShadow'])
+ repeats = 0
+ while repeats < 68:
+  sumIrrigationDitch = 0
+  sumGrass = 0
+  sumRiversXStreams = 0
+  sumImperviousSurface = 0
+  sumLakeXPondXContainer = 0
+  sumCultivatedVegetation = 0
+  sumBareGround = 0
+  sumBuilding = 0
+  sumTreatedPool = 0
+  sumTreesXCanopyCover = 0
+  sumUnknown = 0
+  sumBushXSchrub = 0
+  sumShadow = 0
+  AOInum = 0
+  while AOInum < 37:
+    sumIrrigationDitch += df.iloc[37*repeats + AOI][15]
+    sumGrass += df.iloc[37*repeats + AOI][16]
+    sumRiversXStreams += df.iloc[37*repeats + AOI][17]
+    sumImperviousSurface += df.iloc[37*repeats + AOI][18]
+    sumLakeXPondXContainer += df.iloc[37*repeats + AOI][19]
+    sumCultivatedVegetation += df.iloc[37*repeats + AOI][20]
+    sumBareGround += df.iloc[37*repeats + AOI][21]
+    sumBuilding += df.iloc[37*repeats + AOI][22]
+    sumTreatedPool += df.iloc[37*repeats + AOI][23]
+    sumTreesXCanopyCover += df.iloc[37*repeats + AOI][24]
+    sumUnknown += df.iloc[37*repeats + AOI][25]
+    sumBushXSchrub += df.iloc[37*repeats + AOI][26]
+    sumShadow += df.iloc[37*repeats + AOI][27]
+    AOInum += 1
+  dfLandcoverDistributions.iloc[repeats, 'AOI'] = df.iloc[repeats*37][0]
+  dfLandcoverDistributions.iloc[repeats, 'sumIrrigationDitch'] = sumIrrigationDitch
+  dfLandcoverDistributions.iloc[repeats, 'sumGrass'] = sumGrass
+  dfLandcoverDistributions.iloc[repeats, 'sumRivers/Streams'] = sumRiversXStreams
+  dfLandcoverDistributions.iloc[repeats, 'sumImperviousSurface'] = sumImperviousSurface
+  dfLandcoverDistributions.iloc[repeats, 'sumLake/Pond'] = sumLakeXPondXContainer
+  dfLandcoverDistributions.iloc[repeats, 'sumCultivatedVegetation'] = sumCultivatedVegetation
+  dfLandcoverDistributions.iloc[repeats, 'sumBareGround'] = sumBareGround
+  dfLandcoverDistributions.iloc[repeats, 'sumBuilding'] = sumBuilding
+  dfLandcoverDistributions.iloc[repeats, 'sumTreatedPool'] = sumTreatedPool
+  dfLandcoverDistributions.iloc[repeats, 'sumTrees/Canopy'] = sumTreesXCanopyCover
+  dfLandcoverDistributions.iloc[repeats, 'sumUnknown'] = sumUnknown
+  dfLandcoverDistributions.iloc[repeats, 'sumBush/Shrub'] = sumBushXShrub
+  dfLandcoverDistributions.iloc[repeats, 'sumShadow'] = sumShadow
+  repeats += 1
+  
+st.write(dfLandCoverDistributions)
   
