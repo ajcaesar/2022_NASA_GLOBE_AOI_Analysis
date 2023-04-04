@@ -124,5 +124,4 @@ while repeats < 68:
   dfLandcoverDistributions.at[repeats, 'sumShadow'] = sumShadow
   repeats += 1
   
-st.write(dfLandCoverDistributions)
   
