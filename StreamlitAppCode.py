@@ -134,7 +134,7 @@ st.download_button(
    csv,
    "file.csv",
    "text/csv",
-   key='download-csv'
+   key='download-csv')
 
 st.write('stats for irrigation ditch')
 st.write(dfLandcoverDistributions['sumIrrigationDitch'].describe())
