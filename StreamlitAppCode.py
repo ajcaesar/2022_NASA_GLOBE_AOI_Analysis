@@ -130,7 +130,7 @@ def convert_df(df):
 csv = convert_df(dfLandcoverDistributions)
 
 st.download_button(
-   "Press to Download",
+   "Press to Download Above table as CSV",
    csv,
    "file.csv",
    "text/csv",
