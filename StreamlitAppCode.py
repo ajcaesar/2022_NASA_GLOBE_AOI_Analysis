@@ -90,7 +90,7 @@ while repeats < 68:
   sumTreatedPool = 0
   sumTreesXCanopyCover = 0
   sumUnknown = 0
-  sumBushXSchrub = 0
+  sumBushXShrub = 0
   sumShadow = 0
   AOInum = 0
   while AOInum < 37:
@@ -105,7 +105,7 @@ while repeats < 68:
     sumTreatedPool += df.iloc[37*repeats + AOI][23]
     sumTreesXCanopyCover += df.iloc[37*repeats + AOI][24]
     sumUnknown += df.iloc[37*repeats + AOI][25]
-    sumBushXSchrub += df.iloc[37*repeats + AOI][26]
+    sumBushXShrub += df.iloc[37*repeats + AOI][26]
     sumShadow += df.iloc[37*repeats + AOI][27]
     AOInum += 1
   dfLandcoverDistributions.at[repeats, 'AOI'] = 1
