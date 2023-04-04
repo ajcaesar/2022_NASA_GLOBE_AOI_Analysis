@@ -5,11 +5,6 @@ import numpy as np
 import math
 import altair as alt
 import os 
-import folium
-from folium import plugins
-import rioxarray as rxr
-import earthpy as et
-import earthpy.spatial as es
 
 st.title('Which AOIs are complete')
 df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-3.csv")
