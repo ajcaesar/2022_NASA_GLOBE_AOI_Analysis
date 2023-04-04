@@ -77,8 +77,8 @@ st.write(df)
 dfLandcoverDistributions = pd.DataFrame(columns = ['AOI', 'sumIrrigationDitch', 'sumGrass', 'sumRivers/Streams', 'sumImperviousSurface', 'sumLake/Pond', 
                                                   'sumCultivatedVegetation', 'sumBareGround', 'sumBuilding', 'sumTreatedPool', 'sumTrees/Canopy', 'sumUnknown', 'sumBush/Shrub',
                                                   'sumShadow'])
- repeats = 0
- while repeats < 68:
+repeats = 0
+while repeats < 68:
   sumIrrigationDitch = 0
   sumGrass = 0
   sumRiversXStreams = 0
