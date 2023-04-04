@@ -125,6 +125,17 @@ while repeats < 68:
   repeats += 1
  
 st.write(dfLandcoverDistributions)
+def convert_df(df):
+   return df.to_csv(index=False).encode('utf-8')
+csv = convert_df(dfLandcoverDistributions)
+
+st.download_button(
+   "Press to Download",
+   csv,
+   "file.csv",
+   "text/csv",
+   key='download-csv'
+
 st.write('stats for irrigation ditch')
 st.write(dfLandcoverDistributions['sumIrrigationDitch'].describe())
 st.write('stats for Grass')
