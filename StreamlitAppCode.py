@@ -137,3 +137,16 @@ st.download_button(
    "text/csv",
    key='download-csv')
 
+m = folium.Map(
+    location=st.session_state["center"], zoom_start=st.session_state["zoom"]
+)
+fg = folium.FeatureGroup(name="Markers")
+for marker in st.session_state["markers"]:
+    fg.add_child(marker)
+m.add_child(fg)
+st_folium(
+    m,
+    key="old",
+    height=400,
+    width=700,
+)
