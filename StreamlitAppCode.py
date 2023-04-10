@@ -8,7 +8,7 @@ import os
 import folium
 
 st.title('Which AOIs are complete')
-df = pd.read_csv("AOI Updated Comparisons  - imported from collect earth online-3.csv")
+df = pd.read_csv("/Users/ajcaesar/Desktop/VSCODEPROJECTS/DataFromAOI/")
 dfcheck = pd.DataFrame(columns = ['AOI', 'NumCompleted', 'Complete', 'lat', 'lon', 'Avg Time'])
 df2 = pd.DataFrame(columns = ['AOI', 'lat', 'lon', 'avg time'])
 dfTime = pd.DataFrame(columns = ['AOI', 'Avg Time'])
