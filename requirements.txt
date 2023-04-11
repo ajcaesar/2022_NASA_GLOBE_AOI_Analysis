@@ -1,13 +1,5 @@
-arcgis==1.9.1
 matplotlib
 numpy
 pandas
-seaborn
 streamlit
-geemap
 folium
-ipyleaflet
-earthengine-api
-leafmap
-go_utils
-scikit-learn
